@@ -1,8 +1,7 @@
 # Bootcamps DIO
-![Badge Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python&logoColor=yellow)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Badge Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=Python&logoColor=yellow)
 
 
 Repositório contendo o material desenvolvido nos bootcamps da DIO dos seguintes cursos: 
