@@ -6,7 +6,7 @@
 
 Repositório contendo o desafio de projeto para exercitar as habilidades desenvolvidas com o estudo da bilioteca Pandas do Python.
 
-O dataset está disponível no [kaggle](https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017) e consiste no resultado de 43170 partidas internacionais do futebol masculino, desde a primeira partida oficial em 1872 até 2019. As partidas variam desde eventos como a Copa do Mundo FIFA até a Copa do Mundo FIFI e amistosos entre seleções. Além disso a base de dados não inclui partidas dos jogos olímpicos ou partidas onde qualquer uma das seleções jogou com time reserva, ou seleção sub 23 ou contra clube de futebol.
+O dataset está disponível no [kaggle](https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017) e consiste no resultado de 43170 partidas internacionais do futebol masculino, desde a primeira partida oficial em 1872 até 2022. As partidas variam desde eventos como a Copa do Mundo FIFA até a Copa do Mundo FIFI e amistosos entre seleções. Além disso a base de dados não inclui partidas dos jogos olímpicos ou partidas onde qualquer uma das seleções jogou com time reserva, ou seleção sub 23 ou contra clube de futebol.
 
 O arquivo results.csv inclui as seguintes colunas:
 
