@@ -1,7 +1,7 @@
 # Desafio de Projeto de Análise de Dados com Python e Pandas
-![Jupyter](https://img.shields.io/badge/-Jupyter-black?style=flat-square&logo=Jupyter&logoColor=orange)
-![Python](https://img.shields.io/badge/Python-black?style=flat-square&logo=Python&logoColor=yellow)
-![Kaggle](https://img.shields.io/badge/Kaggle-black?style=flat-square&logo=kaggle&logoColor=blue)
+![Jupyter Notebook](https://img.shields.io/badge/jupyter-F37626.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 
 Repositório contendo o desafio de projeto para exercitar as habilidades desenvolvidas com o estudo da bilioteca Pandas do Python.
