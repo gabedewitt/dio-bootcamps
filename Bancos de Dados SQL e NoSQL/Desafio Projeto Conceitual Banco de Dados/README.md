@@ -19,4 +19,4 @@ A solução dos pontos para refinamento foi:
 * Relacionar a informação de pagamento com cliente de modo 1:N, assim 1 cliente pode cadastrar N formas de pagamento;
 * Relacionar as informações relativas à entrega aos pedidos de modo 1:1, já que o pedido 
 
-![Projeto Conceitual]("E-commerce refinado.png")
+![Projeto Conceitual](E-commerce&#32;refinado.png)
