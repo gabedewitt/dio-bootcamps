@@ -5,4 +5,5 @@
 ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 
-Repositório contendo os desafio de projeto desenvolvidos durante o bootcamp Geração Tech Unimed-BH - Ciência de Dados.
+Repositório contendo os desafios de projeto desenvolvidos durante o bootcamp Geração Tech Unimed-BH - Ciência de Dados.
+<img src="https://hermes.digitalinnovation.one/assets/diome/logo.png" height="150">
