@@ -13,3 +13,10 @@ O modelo apresentado deverá ser refinado acrescentando os seguintes pontos:
 * Cliente PJ e PF – Uma conta pode ser PJ ou PF, mas não pode ter as duas informações;
 * Pagamento – Pode ter cadastrado mais de uma forma de pagamento;
 * Entrega – Possui status e código de rastreio;
+
+A solução dos pontos para refinamento foi:
+* Considerar "Cliente" como uma generalização e adicionar a informação de CPF e CNPJ em subclasses para pessoas físicas e jurídicas;
+* Relacionar a informação de pagamento com cliente de modo 1:N, assim 1 cliente pode cadastrar N formas de pagamento;
+* Relacionar as informações relativas à entrega aos pedidos de modo 1:1, já que o pedido 
+
+![Projeto Conceitual]("E-commerce refinado.png")
