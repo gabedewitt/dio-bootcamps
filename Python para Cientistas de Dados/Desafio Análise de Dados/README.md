@@ -27,3 +27,5 @@ O arquivo shootouts.csv inclui as seguintes colunas:
 * home_team - nome do time da casa
 * away_team - nome do time visitante
 * winner - o vencedor da disputa de pênaltis
+
+[![Link do Kaggle](http://kenposports2.tempsite.ws/_files/sports/c292293e581557bb9ca3ead0e8e42630.png)](https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017)
