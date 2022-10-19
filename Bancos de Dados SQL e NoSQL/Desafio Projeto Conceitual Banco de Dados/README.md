@@ -1,4 +1,4 @@
-# Desafio de Projeto de Projeto Conceitual de Banco de Dados – E-COMMERCE
+# Desafio de Projeto - Projeto Conceitual de Banco de Dados – E-COMMERCE
 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
