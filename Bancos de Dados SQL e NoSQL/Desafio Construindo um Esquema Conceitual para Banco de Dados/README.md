@@ -16,3 +16,5 @@ Criar o esquema conceitual para o contexto de oficina com base na narrativa forn
 * A mesma equipe avalia e executa os serviços
 * Os mecânicos possuem código, nome, endereço e especialidade
 * Cada OS possui: n°, data de emissão, um valor, status e uma data para conclusão dos trabalhos.
+
+![Projeto Conceitual OS](Desafio&#32;Ordem&#32;de&#32;serviço.png)
