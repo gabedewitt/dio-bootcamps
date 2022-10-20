@@ -1,4 +1,4 @@
-# Desafio de Projeto - Construindo um Esquema Conceitual de Banco de Dados – Ordem de Serviço Oficina Mecânica
+# Desafio de Projeto – Construindo um Esquema Conceitual de Banco de Dados – Ordem de Serviço Oficina Mecânica
 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
