@@ -1,0 +1,4 @@
+math
+plotly
+numpy
+matplotlib
