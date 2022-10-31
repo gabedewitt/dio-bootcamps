@@ -32,7 +32,7 @@ from earth_distances.map_plotting import world_map_plot
 # Plotting the map related to Paris and Beijing 
 world_map_plot.plot_world_map(48.856613, 2.352222, 39.904202, 116.407394)
 ```
-![Example](/Screenshot_1.png)
+![Example](Screenshot_1.png)
 ## Author
 Gabriel Vinicius Sebastião
 
