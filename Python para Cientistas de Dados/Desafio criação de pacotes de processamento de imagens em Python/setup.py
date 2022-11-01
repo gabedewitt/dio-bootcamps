@@ -8,7 +8,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="earth_distances",
-    version="0.0.7",
+    version="0.0.8",
     author="Gabriel Vinicius Sebastião",
     author_email="gabrielvrsas@gmail.com",
     description="Package focused on Earth distance calculation and plotting",
