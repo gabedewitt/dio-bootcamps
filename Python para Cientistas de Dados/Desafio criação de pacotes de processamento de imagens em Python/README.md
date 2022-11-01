@@ -1,4 +1,4 @@
-# earth-distances-package
+# earth_distances package
 
 Description. 
 The package earth_distances is used to:
@@ -23,7 +23,7 @@ pip install earth_distances
 ```python
 from earth_distances.distance_calculation import harvesini
 # Calculating the distance between Paris and Beijing
-harvesini.harvesini_distance(48.856613, 2.352222, 39.904202, 116.407394)
+print(harvesini.harvesini_distance(48.856613, 2.352222, 39.904202, 116.407394))
 >>>8216984.310
 ```
 
@@ -32,7 +32,7 @@ from earth_distances.map_plotting import world_map_plot
 # Plotting the map related to Paris and Beijing 
 world_map_plot.plot_world_map(48.856613, 2.352222, 39.904202, 116.407394)
 ```
-![Example](Screenshot_1.png)
+![](https://raw.githubusercontent.com/gabedewitt/dio-bootcamps/main/Python%20para%20Cientistas%20de%20Dados/Desafio%20cria%C3%A7%C3%A3o%20de%20pacotes%20de%20processamento%20de%20imagens%20em%20Python/Screenshot_1.png)
 ## Author
 Gabriel Vinicius Sebastião
 
