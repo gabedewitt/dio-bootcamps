@@ -5,7 +5,8 @@ The package earth_distances is used to:
 
 	Distance:
 		- Calculate and returns distances between two points on the surface of
-		the Earth, or another sphere, provided its radius, rounded to thte
+		the Earth, or another sphere, provided its radius, rounded to the thrid 
+		decimal place
 	Map_Plotting:	
 		- Plot the points on a map of our planet, alongside the distance line
 		in a desired color
