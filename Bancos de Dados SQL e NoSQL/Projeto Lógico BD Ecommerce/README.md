@@ -1,6 +1,7 @@
 # Desafio de Projeto - Projeto Lógico de Banco de Dados – E-COMMERCE
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-Descrição do Desafio
+
+## Descrição do Desafio
 
 No cenário da criação de um banco de dados para um ecommerce, foi elaborado um projeto conceitual para a criação de um modelo ER que armazene as informações de clientes, pedidos, fornecedores externos, estoques internos, vendedores terceiros, entrega e produtos. 
 Seguindo as orientações das aulas me atentei aos relacionamentos e chaves primárias e estrangeiras presentes nas tabelas criadas, de modo a replicar os relacionamentos definidos no modelo relacional extendido.
@@ -9,7 +10,7 @@ Assim como demonstrado durante as aulas realizei a criação do Script SQL para 
 Posteriormente, realizei a persistência de dados para realização de testes. 
 Especifiquei também queries mais complexas dos que apresentadas durante a explicação do desafio, que estão presentes no arquivo queries_data_insertion_projeto.sql. 
 
-Objetivo:
+## Objetivo:
 
 O mapeamento para o cenário foi refinado para os pontos:
 
