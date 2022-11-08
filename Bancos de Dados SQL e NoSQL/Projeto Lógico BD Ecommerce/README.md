@@ -1,39 +1,38 @@
+# Desafio de Projeto - Projeto Lógico de Banco de Dados – E-COMMERCE
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 Descrição do Desafio
 
-Replique a modelagem do projeto lógico de banco de dados para o cenário de e-commerce. Fique atento as definições de chave primária e estrangeira, assim como as constraints presentes no cenário modelado. Perceba que dentro desta modelagem haverá relacionamentos presentes no modelo EER. Sendo assim, consulte como proceder para estes casos. Além disso, aplique o mapeamento de modelos aos refinamentos propostos no módulo de modelagem conceitual.
+No cenário da criação de um banco de dados para um ecommerce, foi elaborado um projeto conceitual para a criação de um modelo ER que armazene as informações de clientes, pedidos, fornecedores externos, estoques internos, vendedores terceiros, entrega e produtos. 
+Seguindo as orientações das aulas me atentei aos relacionamentos e chaves primárias e estrangeiras presentes nas tabelas criadas, de modo a replicar os relacionamentos definidos no modelo relacional extendido.
 
-Assim como demonstrado durante o desafio, realize a criação do Script SQL para criação do esquema do banco de dados. Posteriormente, realize a persistência de dados para realização de testes. Especifique ainda queries mais complexas dos que apresentadas durante a explicação do desafio. Sendo assim, crie queries SQL com as cláusulas abaixo:
+Assim como demonstrado durante as aulas realizei a criação do Script SQL para criação do esquema do banco de dados que corresponde ao arquivo criacao tabelas.sql. 
+Posteriormente, realizei a persistência de dados para realização de testes. 
+Especifiquei também queries mais complexas dos que apresentadas durante a explicação do desafio, que estão presentes no arquivo queries_data_insertion_projeto.sql. 
 
-    Recuperações simples com SELECT Statement
-    Filtros com WHERE Statement
-    Crie expressões para gerar atributos derivados
-    Defina ordenações dos dados com ORDER BY
-    Condições de filtros aos grupos – HAVING Statement
-    Crie junções entre tabelas para fornecer uma perspectiva mais complexa dos dados
-
-Diretrizes
-
-    Não há um mínimo de queries a serem realizadas;
-    Os tópicos supracitados devem estar presentes nas queries;
-    Elabore perguntas que podem ser respondidas pelas consultas;
-    As cláusulas podem estar presentes em mais de uma query;
-
-O projeto deverá ser adicionado a um repositório do Github para futura avaliação do desafio de projeto. Adicione ao Readme a descrição do projeto lógico para fornecer o contexto sobre seu esquema lógico apresentado.
 Objetivo:
 
-[Relembrando] Aplique o mapeamento para o  cenário:
+O mapeamento para o cenário foi refinado para os pontos:
 
-“Refine o modelo apresentado acrescentando os seguintes pontos”
+    Cliente PJ e PF – Uma conta pode ser PJ ou PF, mas não pode ter as duas informações,
+                      foi utilizado um varchar de tamanho 14 para armazenar as informações, 
+                      de modo que o tratamento de dados se dá fora do BD;
 
-    Cliente PJ e PF – Uma conta pode ser PJ ou PF, mas não pode ter as duas informações;
-    Pagamento – Pode ter cadastrado mais de uma forma de pagamento;
-    Entrega – Possui status e código de rastreio;
+    Pagamento – Pode ter cadastrado mais de uma forma de pagamento, foi utilizada uma relação N para M 
+                para relacionar clientes com pagamentos, visto que é possível ocorrer o uso da mesma forma por outro cliente 
+                e de 1 para 1 de forma não vinculante com a tabela pedido, assim cada pedido;
 
-Algumas das perguntas que podes fazer para embasar as queries SQL:
+    Entrega – Possui status e código de rastreio e é associada a pedido numa relação de 1 para 1;
+
+Algumas perguntas para nortear as queries SQL após a persistência dos dados foram:
 
     Quantos pedidos foram feitos por cada cliente?
     Algum vendedor também é fornecedor?
     Relação de produtos fornecedores e estoques;
     Relação de nomes dos fornecedores e nomes dos produtos;
+    Quais itens cada produto registrou?
+    Quais produtos possuem mais de 200 itens em estoque?
+    Qual forma de pagamento e valor total de cada pedido?
 
-Agora é a sua vez de ser o protagonista! Implemente o desafio sugerido pela expert e suba seu projeto para um repositório próprio, com isso, você aumentará ainda mais seu portfólio de projetos no GitHub!
+O modelo relacional está disponível no arquivo png (Projeto Lógico E-commerce.png) dentro do repositório
+
+![Modelo ER](Projeto&#32;Lógico&#32;E-commerce.png)

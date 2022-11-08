@@ -9,13 +9,13 @@ insert into Clientes(Fname,Minit, Lname, CPF_CNPJ, Address)
               ('Lorenço', 'S', 'Médici', 87893545321, 'rua ezio firenzi 779, Palmares - Nova Florença'),
               ('João', 'L', 'Silva', 45632112357, 'rua silva de prata 29, Carangola - Cidade das Flores');
               
-insert into produtos (Pname, categoria, avaliação, tamanho, preçoUnitário) values
+insert into produtos(Pname, categoria, avaliação, tamanho, preçoUnitário) values
 					('Fone de ouvido Beats', 'Eletrônicos', '4', default, 1959.90),             
                     ('Box Trilogia O Senhor dos Anéis','Livros','5',default, 89.90),         
                     ('Fone de ouvido Sennheiser', 'Eletrônicos', '4.8', default, 1459),     
                     ('Sofá retrátil', 'Móveis', '3.8', '3x0.57x0.80', 1099),          
                     ('Cama King Size', 'Móveis', '4.1', '2.03x1.93x0.4', 3279.20),             
-                    ('Headset Logitech', 'Eletrônicos', '4.5', default, 269.99);               
+                    ('Headset Logitech', 'Eletrônicos', '4.5', default, 269.99);
 
 -- idPagamento, tipoPagamento, limiteDisponivel, dataValidade
 -- tipoPagamento enum('Boleto', 'Cartão', 'Dois cartões', 'PIX')
@@ -58,7 +58,8 @@ insert into pedidos (idPedidoCliente, statusPedido, descricaoPedido, valorFrete,
                     (3,'Confirmado','compra pelo aplicativo',12,89.9,2),
                     (4,'Confirmado','compra pelo website',180,3279.2,8),
                     (2,default,'compra pelo website',180,3279.20,4),
-                    (5,'Confirmado','compra pelo aplicativo',0,269.99,1);      
+                    (5,'Confirmado','compra pelo aplicativo',0,269.99,1),
+                    (6,default,'compra pelo website',180,3279.20,6);      
 
 -- statusEntrega ENUM('Saiu para entrega', 'Entregue', 'Em processamento')
 insert into entregas(idPedido, codRastreio,  statusEntrega) values
@@ -93,23 +94,118 @@ insert into produtoLocal(idLProduto,idLEstoque,localizacao) values
 
 -- idFornecedor, razaoSocial, CNPJ, contato              
 insert into fornecedores(razaoSocial, CNPJ, contato) values
-					('Móveis Almeida',15932647859123,21556478511),
-                    ('Camas Acajueiras',12322154741583,51044123586);
+					('Móveis Almeida',15932647859123,21956478511),
+                    ('Camas Acajueiras',12322154741583,05144123586),
+                    ('Mamango Tecnologias',55557784575214,02177124556);
                     
 insert into produtoFornecedor(idPfFornecedor, idPfProduto, quantity) values
 						(1,4,100),
-                        (2,5,125);
+                        (2,5,125),
+                        (3,3,46);
                         
 -- idVendedor, razaoSocial, nomeFantasia, CPF_CNPJ, localizacao, contato                        
 insert into vendedores(razaoSocial, nomeFantasia, CPF_CNPJ, localizacao, contato) values
 						('Tech Giants',null,12312345678451,'Santos',01355857974),
                         ('Lanciette Jogos LTDA','Lan Games',00012345678912,'São Paulo',01178912344),
-                        ('Mamango Tecnologias',null,55557784575214,'Rio de Janeiro',02177124556);
+                        ('Mamango Tecnologias',null,55557784575214,'Rio de Janeiro',02177124556),
+                        ('Camas Acajueiras',null,12322154741583,'Porto Alegre',05144123586);
                     
 insert into produtoVendedor(idPVendedor, idPVproduto, prodQuantity) values
 					(1,1,25),
                     (2,3,75),
                     (3,6,50);
 
+insert into produtos(Pname, categoria, avaliação, tamanho, preçoUnitário) values
+                    ('Amendoim Japonês Mendorato 1,010kg', 'Alimentos', '5.0', default, 20.69),
+                    ('Chinelo Top Max, Havaianas', 'Vestimenta', '4.3', default, 26.99),
+					('LEGO® Architecture - Londres', 'Brinquedos', '4.7', default, 299.99);
+
+insert into estoqueProduto(localEstoque, quantidade) values
+                    ('Ribeirão Preto', 1300),
+                    ('Rio de Janeiro', 2000),
+                    ('Campinas', 120);
+
+insert into produtoLocal(idLProduto,idLEstoque,localizacao) values
+					(7,6,'SP'),
+                    (8,7,'RJ'),
+                    (9,8,'SP');
+
+insert into pagamentos(tipoPagamento, limiteDisponivel, dataValidade) values
+					('Cartão', 7500, 08/08/2026);
+
+insert into pagamentoCliente(idPCliente, idPPagamento) values
+					(7,2),
+                    (7,9);
+
+insert into pedidos (idPedidoCliente, statusPedido, descricaoPedido, valorFrete, valorProdutos, idPagamento) values
+					(4,'Confirmado','compra pelo website',21,299.99,8),
+                    (7,default,'compra pelo aplicativo',85,1665.9,9),
+                    (1,default,'compra pelo aplicativo',12,80.97,7);
                     
-select * from clientes c, pedidos p, entregas e where c.idCliente = idPedidoCliente and p.idPedido = e.idPedido;                    
+insert into produtoPedido (idPOproduto, idPOpedido, poQuantidade, poStatus) values
+					(9,7,1,default),
+                    (7,8,10,default),
+                    (3,8,1,default),
+                    (8,9,3,default);
+                    
+                    
+use ecommerce_refinado; 
+-- Contando quantos clientes     
+select count(*) as Nro_clientes from clientes;
+
+-- Contando quantos clientes     
+select count(*) as Nro_pedidos from pedidos;
+
+-- Observando os clientes com pedidos já processados             
+select * from clientes c, pedidos p, entregas e where c.idCliente = idPedidoCliente and p.idPedido = e.idPedido;     
+
+select * from clientes c, pedidos p where c.idCliente = idPedidoCliente;
+
+-- Pedidos associados a clientes
+select concat(Fname,' ',Minit,'. ',Lname) as Cliente, idPedido as Nro_pedido, statusPedido as Status_pedido
+	from clientes c, pedidos p where c.idCliente = idPedidoCliente order by Nro_pedido;
+
+-- Quantos pedidos por cada cliente
+select concat(Fname,' ',Minit,'. ',Lname) as Cliente, count(*) as N_pedidos
+	from clientes c, pedidos p where c.idCliente = idPedidoCliente group by Cliente order by N_pedidos desc;
+
+-- Relação fornecedor, produtos e estoques
+select f.razaoSocial as Nome_fornecedor, p.Pname as Nome_produto, pF.quantity as estoque
+	from fornecedores f, produtoFornecedor pF, produtos p 
+    where f.idFornecedor = pf.idPfFornecedor and  p.idProduto = pF.idPfProduto
+    order by estoque desc;
+
+-- Relação produtos com estoque interno, localização
+select p.Pname as Nome_produto, p.categoria as Categoria,
+	concat(eP.localEstoque,'-',pL.localizacao) as Localização, eP.quantidade as Quantidade_estoque
+	from produtoLocal pL left join produtos p on pL.idLProduto = p.idProduto 
+	join estoqueProduto eP on pL.idLEstoque = eP.idEstoqueProduto
+    order by Quantidade_estoque;
+    
+-- Query para verificar se algum fornecedor também é vendedor
+select f.razaoSocial as Razão_social, f.contato as Telefone_contato, v.localizacao as Cidade
+	from fornecedores f, vendedores v where f.CNPJ = v.CPF_CNPJ;
+    
+-- Observando formas de pagamento para cada pedido e somando valor dos produtos e frete 
+select idPedido as N_pedido, concat(c.Fname,' ',c.Minit,'. ',c.Lname) as Cliente, pag.tipoPagamento,
+	p.valorProdutos as Total_produtos, p.valorFrete as Frete,
+    ROUND(p.valorProdutos + p.valorFrete, 2) as Valor_total
+	from clientes c, pedidos p, pagamentos pag where c.idCliente = idPedidoCliente 
+	and p.idPagamento = pag.idPagamento order by Frete desc;    
+    
+-- Verificando quais produtos possuem mais de 200 items em estoque
+select  p.Pname as Nome_produto, p.categoria as Categoria,
+	concat(eP.localEstoque,'-',pL.localizacao) as Localização, eP.quantidade as Quantidade_estoque
+    from produtos p left join produtoLocal pL on pL.idLProduto = p.idProduto 
+	join estoqueProduto eP on pL.idLEstoque = eP.idEstoqueProduto
+    having Quantidade_estoque > 200
+    order by Quantidade_estoque desc;    
+
+-- Recuperando os itens	de cada pedido		
+select pP.idPOpedido as id_Pedido, concat(c.Fname,' ',c.Minit,'. ',c.Lname) as Cliente, 
+		GROUP_CONCAT(' ',prod.Pname) as itens_pedido
+			from produtoPedido pP, produtos prod, pedidos p, clientes c
+				where pP.idPOproduto = prod.idProduto and p.idPedido = pP.idPOpedido 
+				and p.idPedidoCliente = c.idCliente
+				group by pP.idPOproduto
+                order by id_Pedido;      

@@ -13,7 +13,6 @@ create table clientes(
         Lname varchar(20) not null,
         CPF_CNPJ varchar(14) not null,
         Address varchar(255),
-        nickname varchar(45),
         constraint unique_cpf_cnpj_cliente unique(CPF_CNPJ)
 );
 
