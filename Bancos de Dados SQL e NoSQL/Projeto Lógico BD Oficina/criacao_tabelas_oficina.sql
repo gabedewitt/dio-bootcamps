@@ -2,12 +2,13 @@
 create database if not exists oficina_os;
 use oficina_os;
 
+-- drop caso necessário
 -- drop database oficina_os;
 
 -- cria tabela pessoa_física
 
 create table pessoa_física(
-		idPessoa int auto_increment primary key,
+	idPessoa int auto_increment primary key,
         Fname varchar(20) not null,
         Minit char(3),
         Lname varchar(20) not null,
@@ -22,7 +23,7 @@ alter table pessoa_física auto_increment=1;
 -- cria tabela clientes
 
 create table clientes(
-		idCliente int auto_increment primary key,
+	idCliente int auto_increment primary key,
         idCPessoa int,
         constraint fk_pessoa_cliente foreign key(idCPessoa) references pessoa_física(idPessoa)
 );
@@ -39,27 +40,26 @@ create table mecanicos(
 -- cria tabela da equipe responsável 
 
 create table equipeOS(
-		idEquipe int auto_increment primary key,
-        códEquipe char(3) not null
+	idEquipe int auto_increment primary key,
+        códEquipe char(3) not null,
+        descrEquipe varchar(40)
 );
 
 -- cria tabela veículo
 create table veiculo(
-		idVeiculo int auto_increment primary key,
+	idVeiculo int auto_increment primary key,
         idVCliente int,
         placa char(7) not null,
         modelo varchar(15),
         fabricante varchar(20),
         ano year,
-        idEquipeV int,
-        constraint fk_cliente_veiculo foreign key(idVCliente) references clientes(idCliente),
-        constraint fk_equipe_veiculo foreign key(idEquipeV) references equipeOS(idEquipe)
+        constraint fk_cliente_veiculo foreign key(idVCliente) references clientes(idCliente)
 );
 
 -- cria tabela relacionamento mecânico e equipe
 
 create table mecanicoEquipe(
-		idME_Mecanico int,
+	idME_Mecanico int,
         idME_Equipe int,
         primary key (idME_Mecanico, idME_Equipe),
         constraint fk_mec_equipe_mecanico foreign key(idME_Mecanico) references mecanicos(idMecanico),
@@ -68,20 +68,20 @@ create table mecanicoEquipe(
 
 -- cria tabela pedido
 create table ordemServiço(
-		idOS int auto_increment primary key,
+	idOS int auto_increment primary key,
         idEquipeResp int,
-        numOS char(12),
-        statusOS enum('Cancelado','Confirmado','Em processamento','Atrasada') default 'Em processamento',
+        idOSVeiculo int,
+        statusOS enum('Concluída','Em processamento','Atrasada') default 'Em processamento',
         dataEmissao date,
         previsaoConclusao date,
         constraint fk_equipe_os foreign key (idEquipeResp) references clientes(idCliente),
-        constraint unique_numOS unique(numOS)
+        constraint fk_veiculo_os foreign key (idOSVeiculo) references veiculo(idVeiculo)
 );
 
 -- cria tabela peças
 
 create table peças(
-		idPeças int auto_increment primary key,
+	idPeças int auto_increment primary key,
         nomeP varchar(30) not null,
         fabricante varchar(20) not null,
         precoUnit float not null  
@@ -90,14 +90,14 @@ create table peças(
 -- cria tabela custo serviço
 
 create table custoServiço(
-		idCustoServ int auto_increment primary key,
+	idCustoServ int auto_increment primary key,
         descrServ varchar(30) not null,
         valorServ float not null
 );
 
 -- cria tabela de relacionamento OS e peças
 create table peçasOS(
-		idPOS_Peça int,
+	idPOS_Peça int,
         idPOS_OS int,
         quantidade int default 1,
         primary key (idPOS_Peça, idPOS_OS),
@@ -108,7 +108,7 @@ create table peçasOS(
 -- cria tabela de relacionamento OS e custo de serviço
 
 create table custoServOS(
-		idCSOS_Custo int,
+	idCSOS_Custo int,
         idCSOS_OS int,
         primary key (idCSOS_Custo, idCSOS_OS),
         constraint fk_csos_custo foreign key(idCSOS_Custo) references custoServiço(idCustoServ),

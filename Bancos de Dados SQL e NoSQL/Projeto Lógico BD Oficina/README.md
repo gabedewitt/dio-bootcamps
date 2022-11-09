@@ -15,12 +15,20 @@ Especifiquei também queries mais complexas dos que apresentadas durante a expli
 O mapeamento para o cenário foi refinado para os pontos:
 
     Pessoas Físicas – Pode ser tanto cliente quanto mecânico, serve como
-    superclasse dessas tabelas  
-                      de modo que o tratamento de dados se dá fora do BD;
+    superclasse dessas tabelas, reunindo informações comuns a clientes e
+    mecânicos como nome, endereço, cpf e contato;
 
-    Equipe Responsável – Pode ter cadastrado mais de uma forma de pagamento, foi utilizada uma relação N para M 
-                para relacionar clientes com pagamentos, visto que é possível ocorrer o uso da mesma forma por outro cliente 
-                e de 1 para 1 de forma não vinculante com a tabela pedido, assim cada pedido;
+    Equipe Responsável – Pode ter cadastrado mais de uma forma de pagamento,
+    foi utilizada uma relação N para M para relacionar equipes com mecânicos,
+    visto que é possível que um mecânico integre mais de uma equipe ao mesmo
+    tempo;
+
+    Veículo - cada veículo tem seu id presente na ordem de Serviço, visto que
+    um mesmo veículo pode demandar reparos diversos pelas equipes da oficina;
+
+    Ordem de serviço - consulta as tabelas de custo de serviço para definir o
+    valor da OS, contém status, id da equipe, do veículo e data de início dos
+    trabalhos e a previsão de conclusão da OS.                         
 
     
 
@@ -28,10 +36,9 @@ Algumas perguntas para nortear as queries SQL após a persistência dos dados fo
 
     Quantos mecânicos compõem cada equipe?
     Existe alguma OS atrasada?
-    Quais ordem de serviço são mais demoradas?
+    Quais Ordens de Serviço levaram mais de 5 dias?
     Algum mecânico já usou os serviços da oficina?
-    Qual carro passou mais vezes na oficina?
-    Quais peças mais usadas nas OS's?
+    Quais Ordens de serviço custaram mais de 1000 reais?
 
 O modelo relacional está disponível no arquivo png (Projeto Lógico Oficina.png) dentro do repositório
 e exibido logo abaixo:
