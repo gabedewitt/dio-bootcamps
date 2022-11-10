@@ -1,0 +1,6 @@
+{
+  "Artist": {"S": "Foo Fighters"},
+  "SongTitle": {"S": "Best of You"},
+  "AlbumTitle": {"S": "In Your Honor"},
+  "SongYear": {"S": "2005"}
+}

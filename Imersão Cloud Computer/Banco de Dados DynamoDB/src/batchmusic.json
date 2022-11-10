@@ -1,0 +1,94 @@
+{
+    "Musicas": [
+        {
+            "PutRequest": {
+                "Item": {
+                  "Artist": {"S": "Foo Fighters"},
+                  "SongTitle": {"S": "Everlong"},
+                  "AlbumTitle": {"S": "Foo Fighters"},
+                  "SongYear": {"S": "1997"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                  "Artist": {"S": "Foo Fighters"},
+                  "SongTitle": {"S": "The Pretender"},
+                  "AlbumTitle": {"S": "Echoes, Silence, Patience & Grace"},
+                  "SongYear": {"S": "2007"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                  "Artist": {"S": "Guns N' Roses"},
+                  "SongTitle": {"S": "Paradise City"},
+                  "AlbumTitle": {"S": "Appetite For Destruction"},
+                  "SongYear": {"S": "1987"}
+                }
+            }
+        },
+        {
+          "PutRequest": {
+              "Item": {
+                "Artist": {"S": "Guns N' Roses"},
+                "SongTitle": {"S": "Sweet Child O' Mine"},
+                "AlbumTitle": {"S": "Appetite For Destruction"},
+                "SongYear": {"S": "1987"}
+              }
+          }
+        },
+        {
+          "PutRequest": {
+              "Item": {
+                "Artist": {"S": "Queen"},
+                "SongTitle": {"S": "Bicycle Race"},
+                "AlbumTitle": {"S": "Jazz"},
+                "SongYear": {"S": "1978"}
+              }
+          }
+        },
+        {
+          "PutRequest": {
+              "Item": {
+                "Artist": {"S": "The White Stripes"},
+                "SongTitle": {"S": "Seven Nation Army"},
+                "AlbumTitle": {"S": "Elephant"},
+                "SongYear": {"S": "2003"}
+              }
+          }
+        },
+        {
+          "PutRequest": {
+              "Item": {
+                "Artist": {"S": "The White Stripes"},
+                "SongTitle": {"S": "The Hardest Button to Button"},
+                "AlbumTitle": {"S": "Elephant"},
+                "SongYear": {"S": "2003"}
+              }
+          }
+        },
+        {
+          "PutRequest": {
+              "Item": {
+                "Artist": {"S": "Queen"},
+                "SongTitle": {"S": "Don't Stop Me Now"},
+                "AlbumTitle": {"S": "Jazz"},
+                "SongYear": {"S": "1978"}
+              }
+          }
+        },
+        {
+          "PutRequest": {
+              "Item": {
+                "Artist": {"S": "Michael Jackson"},
+                "SongTitle": {"S": "Billie Jean"},
+                "AlbumTitle": {"S": "Thriller"},
+                "SongYear": {"S": "1982"}
+              }
+          }
+        }
+      ]
+}
