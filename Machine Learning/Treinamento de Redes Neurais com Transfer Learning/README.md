@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
 ![Google Colab](https://img.shields.io/badge/-Google_Colab-gray?style=for-the-badge&logo=Google+Colab&logoColor=orange)
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gabedewitt/dio-bootcamps/blob/main/transfer_learning_caes_gatos.ipynb) <br>
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gabedewitt/dio-bootcamps/blob/268a52ba1e99635adfbd3b0786224f4b65f62bdc/Machine%20Learning/Treinamento%20de%20Redes%20Neurais%20com%20Transfer%20Learning/transfer_learning_caes_gatos.ipynb) <br>
 
 Desenvolvi esse projeto tendo como base o exemplo disponibilizado pelo Prof. Diego Renan na aula gravada, e que está disponível no link do [colab](https://colab.research.google.com/github/kylemath/ml4a-guides/blob/master/notebooks/transfer-learning.ipynb), porém utilizei apenas 2000 registros da base de dados de cães e gatos (1000 para cada classe), dado a limitação do ambiente do colab.
 
