@@ -1,5 +1,7 @@
 # Desafio dados demográficos com Serviços da AWS
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 Este repositório foi elaborado para armazenar os resultados da utilização do serviços
 da AWS: S3, Glue, Athena e QuickSight, de modo que as queries elaboradas estão salvas
 nos arquivos do diretório sql e os dashboards exportados do QuickSight nos arquivos pdf 

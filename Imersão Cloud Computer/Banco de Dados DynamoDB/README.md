@@ -1,6 +1,8 @@
 # Criação de banco de dados no DynamoDB
 Repositório com comandos para  Amazon DynamoDB
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 ### Descrição do projeto
 
 Tomando como base as     
